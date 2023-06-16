@@ -86,7 +86,6 @@ function createGrid(){
                 paint = getRandomColor()
             }
             this.style.backgroundColor = paint
-            console.log('d')
             }
         })
     }
