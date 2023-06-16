@@ -2,17 +2,27 @@ let myRange = document.getElementById("myRange")
 let gridSize = parseInt(myRange.value)
 let rangeValue = document.getElementById("rangeValue")
 let touch;
+let active = "off"
 createGrid()
 
 let color = 'black'
 let colorOptions = document.getElementsByName("color")
 let paint = 'black'
 
+
 for (let i = 0;i < colorOptions.length; i++){
     colorOptions[i].addEventListener('click',function(){
         color = this.value
         paint = this.value
     })
+}
+
+let container = document.getElementById("contentData")
+container.onmousedown = function(){
+    active = "on"
+}
+container.onmouseup = function(){
+    active = "off"
 }
 
 function getRandomColor() {
@@ -69,6 +79,7 @@ function createGrid(){
 
     for (let i = 0; i < touch.length; i++){
         touch[i].addEventListener('mouseenter',function(){
+            if (active === "on"){
             this.classList.add('active')
 
             if (color === "rainbow"){
@@ -76,6 +87,7 @@ function createGrid(){
             }
             this.style.backgroundColor = paint
             console.log('d')
+            }
         })
     }
 }
