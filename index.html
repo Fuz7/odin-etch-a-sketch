@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a Sketch</title>
-    <script src="./etch-a-sketch.js"></script>
-    <link rel="stylesheet" href="static/styles.css1">
-</head>
+    <script src="./etch-a-sketch.js" defer ></script>
+    <link rel="stylesheet" href="static/styles.css">
 <body>
-    
+    <div class="container">
+        <div class="title">Etch A Sketch</div>
+        <div class="contentContainer">
+            <div class="option">
+                <input id="black" class="black" name="color" type="radio">
+                <label for="black">Black</label>
+                <input id="rainbow" class="rainbow" name="color" type="radio">
+                <label for="rainbow">Rainbow</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div id="rangeValue">50px x 50px</div>
+            </div>
+            <div class="contentData" id="contentData">
+                          
+            </div>
+        </div>
+    </div>
 </body>
 </html>

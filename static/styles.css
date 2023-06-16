@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.30)),url(background.jpg);
+    overflow-y: hidden;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding-top: 80px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 70px;
+    font-weight: 700;
+    color: rgb(74, 215, 227);
+    padding-left: 22px;
+    font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Verdana, sans-serif;
+    
+}
+
+
+.contentContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 12px;
+    padding-right: 60px;
+}
+
+
+.option{
+    width: 200px;
+    height: 400px;
+    border: wheat solid 2px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    gap: 20px;
+}
+
+.contentData{
+    width: 600px;
+    height: 600px;
+    border: wheat solid 3px;
+    border-radius: 5px;
+}
+
+.option > input[type=radio]{
+    display: none;
+}
+
+.black + label,.rainbow + label{
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 35px;
+    color: #0A214C;
+    border: 3px #0A214C solid;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.black + label:hover,.black:checked + label{
+    background-color: yellow;
+}
+
+.rainbow + label:hover,.rainbow:checked + label{
+    background-color: palevioletred;
+}
+
+.contentData{
+    display: flex;
+    flex-direction: column;
+}
+
+.contentData > .column{
+    flex-grow: 1;
+    background-color: white;
+    display: flex;
+}
+
+.column > div{
+    flex: 1;
+    background-color: white;
+}
+
+#myRange{
+    margin-top: 50px;
+}
+
+#rangeValue{
+    font-size: 24px;
+    font-weight: 600;
+}
