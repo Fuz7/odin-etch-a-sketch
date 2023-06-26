@@ -97,6 +97,12 @@ body{
 .column > div{
     flex: 1;
     background-color: white;
+    border-top: 1px solid rgba(0,0,0,0.30);
+    border-right: 1px solid rgba(0,0,0,0.30);
+}
+
+.row:first-child{
+    border-left: 1px solid rgba(0,0,0,0.30);
 }
 
 #myRange{
