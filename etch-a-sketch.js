@@ -63,16 +63,18 @@ function createGrid(){
 
     for (let i = 0; i < gridSize; i++){
         let contentData = document.getElementById("contentData")
-        let column = "<div class='column'></div>"
-        contentData.innerHTML += column
+        let column = document.createElement("div")
+        column.classList.add('column')
+        contentData.append(column)
     }
 
     let column = document.getElementsByClassName('column')
     for (let i = 0; i < gridSize; i++){
         
         for (let j = 0; j < gridSize; j++){
-            let row = "<div class='row'></div>"
-            column[i].innerHTML += row
+            let row = document.createElement('div')
+            row.classList.add('row')
+            column[i].append(row)
         }
     }
     touch = document.getElementsByClassName('row')
